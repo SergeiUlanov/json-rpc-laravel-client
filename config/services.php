@@ -31,7 +31,8 @@ return [
     ],
 
     'form-widget' => [
-        'api-base-uri'    => 'http://tserv.localhost/api/',
+      //'api-base-uri'    => 'http://tserv.localhost/api/',
+        'api-base-uri'    => 'http://127.0.0.1:8001/api/',
         'api-method-uri'  => 'data',
         'api-timeout'     => 0,
         'server-timezone' => 'UTC',
