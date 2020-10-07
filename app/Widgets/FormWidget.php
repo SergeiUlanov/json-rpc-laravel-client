@@ -126,10 +126,12 @@ class FormWidget extends AbstractWidget
         $rpcParams = array($pageUID);
         $serverData = $this->rpcClient->send($rpcMethod, $rpcParams);
 
-        foreach($serverData['result'] as $key=>$rec) {
-            $serverUtfDate = $serverData['result'][$key]['time'] . ' ' . $this->serverTimeZone;
-            $localDate = Carbon::parse($serverUtfDate)->timezone($this->localTimeZone)->translatedFormat($this->dateFormat);
-            $serverData['result'][$key]['time'] = $localDate;
+        if(isset($serverData['result'])) {
+            foreach($serverData['result'] as $key=>$rec) {
+                $serverUtfDate = $serverData['result'][$key]['time'] . ' ' . $this->serverTimeZone;
+                $localDate = Carbon::parse($serverUtfDate)->timezone($this->localTimeZone)->translatedFormat($this->dateFormat);
+                $serverData['result'][$key]['time'] = $localDate;
+            }
         }
 
         if(! isset($serverData['result'])  &&  ! isset($serverData['error'])) {
