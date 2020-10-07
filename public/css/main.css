@@ -108,6 +108,7 @@ body { display: flex; flex-direction: column; }
 .wg_time { padding: 9px 9px 0 0; text-align: right; font-style: italic; font-size: 70%;}
 
 .wg_input-errors { list-style: none; padding: 12px 0 0; color: #c00; }
-.wg_resp-ok, .wg_resp-err, .wg_data-err { color: #c00; padding: 12px 0 0; text-align: center; }
+.wg_resp-ok, .wg_resp-err, .wg_data-err, .wg_rear-err { color: #c00; padding: 12px 0 0; text-align: center; }
 .wg_resp-ok { color: #0c0; }
+.wg_rear-err { color: #718096; padding: 0 0 12px; }
 .wg_resp-err, .wg_data-err { color: #c00; }

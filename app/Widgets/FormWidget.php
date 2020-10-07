@@ -133,10 +133,15 @@ class FormWidget extends AbstractWidget
                 $serverData['result'][$key]['time'] = $localDate;
             }
         }
+        // Упрощённый вывод ошибки с целью показать что нет связи с сервером
+        // todo улучшить обработку ошибок
+        //elseif(! isset($serverData['result'])  &&  ! isset($serverData['error'])) {
+        else {
+            $serverData['error']['message'] = 'Сервер недоступен';
+		}
+        // dump($serverData);
+        // {!! var_dump($config) !!}
 
-        if(! isset($serverData['result'])  &&  ! isset($serverData['error'])) {
-            $serverData['error']['message'] = 'Ошибка, возможно сервер не ответил';
-        }
         return $serverData;
     }
 

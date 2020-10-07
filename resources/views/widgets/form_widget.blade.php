@@ -27,7 +27,7 @@
             <div class="wg_resp-ok">{{ $config['result']['ok'] }}</div>
         @endisset
 
-        @isset($config['error'])
+        @isset($config['error']['message'])
             <div class="wg_resp-err">{{ $config['error']['message'] }}</div>
         @endisset
 
@@ -37,6 +37,10 @@
     </form>
 
     <!-- <div class="wg_info">Page uid: {{ $config['page_uid'] }}</div> -->
+
+    @isset($config['page_recs']['error']['message'])
+        <div class="wg_rear-err">{{ $config['page_recs']['error']['message'] }}</div>
+    @endisset
 
     @isset($config['page_recs']['result'])
         @foreach ($config['page_recs']['result'] as $pageRec)
