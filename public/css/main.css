@@ -1,0 +1,113 @@
+html,body,div,h1,h2,h3,h4,h5,h6,p,img,form,label,legend,ul,li {
+   margin:0;
+   padding:0;
+   border: 0;
+   background:transparent;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+h1 { padding-bottom: 9px; }
+h2 { padding-bottom: 9px; }
+h3 { padding-bottom: 9px; }
+p  { padding-bottom: 9px; }
+
+
+
+/* Футер к низу */
+
+html, body { min-height: 100vh; }
+body { display: flex; flex-direction: column; }
+.data { flex-grow: 1; }
+
+
+
+/* Основные блоки */
+
+.top-menu, .data, .footer-data {
+    width: 1004px;
+    margin: 0 auto;
+}
+.head {
+    background-color: #2d3748;
+}
+.footer {
+    background-color: #2d3748; overflow: hidden; min-height: 90px;
+}
+.data {
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+.side-right {
+    padding: 16px 32px 16px 0; width: 300px; float: right; overflow: hidden;
+}
+
+.content {
+    padding: 16px 32px; margin-right: 340px; overflow: hidden;
+}
+.content p { text-align: justify; }
+
+
+
+/* Верхнее меню */
+
+.top-menu {
+    overflow: hidden;
+}
+.top-menu__container {
+    display: flex;
+    /* flex-wrap: wrap; justify-content: space-evenly; align-content: space-evenly; */
+    justify-content: flex-end;
+}
+.top-menu__item {
+    display: flex; flex: 0; align-items: center;
+    height: 69px; padding: 1px 21px 0;
+    font-size: 19px; text-transform: uppercase; text-decoration: none;
+}
+.top-menu__item-link {
+    color: #fff; text-decoration: none;
+}
+.top-menu__item-link:hover {
+    color: #ff0; text-decoration: underline;
+}
+
+
+
+/* Лого */
+
+.top-menu__logo {
+	float: left; padding-left: 24px;
+}
+.top-menu__logo-link {
+	font-size: 32px; line-height: 69px;
+    color: #0ff; text-decoration: none;
+}
+.top-menu__logo-link:hover {
+    color: #ff0;
+}
+
+
+
+/* Виджет */
+
+.wg_form {
+    border: 1px solid #2d3748;
+    border-radius: .5rem;
+    padding: 9px 12px 0px;
+}
+.is-invalid { border: 1px solid #f00; }
+.wg_label { display:inline-block; padding: 9px 0 1px; }
+.wg_input, .wg_text { width: calc(100% - 12px); padding: 3px 6px; }
+.wg_text { height: 130px; }
+.wd_ctrl { padding: 19px 0 16px; text-align: right; }
+.wg_submit {  }
+.wg_info { text-align: left; font-size: 87%; color: #718096}
+
+.wg_rec  { margin: 9px 0; padding: 6px 0; border-top: 1px solid #718096; word-wrap: break-word; }
+.wg_name { font-weight: bold; }
+.wg_time { padding: 9px 9px 0 0; text-align: right; font-style: italic; font-size: 70%;}
+
+.wg_input-errors { list-style: none; padding: 12px 0 0; color: #c00; }
+.wg_resp-ok, .wg_resp-err, .wg_data-err { color: #c00; padding: 12px 0 0; text-align: center; }
+.wg_resp-ok { color: #0c0; }
+.wg_resp-err, .wg_data-err { color: #c00; }
