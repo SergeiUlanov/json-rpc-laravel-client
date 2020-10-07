@@ -5,19 +5,19 @@ use App\Http\Controllers\WidgetFormController;
 
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('request');
+})->name('request');
 
-Route::get('about', function () {
-    return view('about');
-})->name('about');
+Route::get('response', function () {
+    return view('response');
+})->name('response');
 
-Route::get('contacts', function () {
-    return view('contacts');
-})->name('contacts');
+Route::get('errors', function () {
+    return view('errors');
+})->name('errors');
 
-Route::post('/', [WidgetFormController::class, 'storeWidgetForm'])->name('home');
-Route::post('about', [WidgetFormController::class, 'storeWidgetForm'])->name('about');
-Route::post('contacts', [WidgetFormController::class, 'storeWidgetForm'])->name('contacts');
+Route::post('/', [WidgetFormController::class, 'storeWidgetForm'])->name('request');
+Route::post('response', [WidgetFormController::class, 'storeWidgetForm'])->name('response');
+Route::post('errors', [WidgetFormController::class, 'storeWidgetForm'])->name('errors');
 
 //Route::get('debug', [WidgetFormController::class, 'storeWidgetFormDebug'])->name('debug');

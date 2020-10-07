@@ -17,9 +17,9 @@
                     <a href="#" class="top-menu__logo-link">tClient</a>
                 </div>
                 <ul class="top-menu__container">
-                    <li class="top-menu__item"><a class="top-menu__item-link" href="{{ route('home') }}">Home</a></li>
-                    <li class="top-menu__item"><a class="top-menu__item-link" href="{{ route('about') }}">About</a></li>
-                    <li class="top-menu__item"><a class="top-menu__item-link" href="{{ route('contacts') }}">Contacts</a></li>
+                    <li class="top-menu__item"><a class="top-menu__item-link" href="{{ route('request') }}">Request</a></li>
+                    <li class="top-menu__item"><a class="top-menu__item-link" href="{{ route('response') }}">Response</a></li>
+                    <li class="top-menu__item"><a class="top-menu__item-link" href="{{ route('errors') }}">Error</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,7 +39,8 @@
 
         <footer class="footer">
             <div class="footer-data">
-                Футер
+                <p>2020 Sergey Ulanov</p>
+                <p><a href="https://github.com/SergeyUlanov" target="_blank">https://github.com/SergeyUlanov</a></p>
             </div>
         </footer>
 

@@ -1,6 +1,6 @@
-html,body,div,h1,h2,h3,h4,h5,h6,p,img,form,label,legend,ul,li {
-   margin:0;
-   padding:0;
+html,body,div,h1,h2,h3,h4,h5,h6,p,img,form,label,legend {
+   margin: 0;
+   padding: 0;
    border: 0;
    background:transparent;
 }
@@ -13,7 +13,11 @@ h2 { padding-bottom: 9px; }
 h3 { padding-bottom: 9px; }
 p  { padding-bottom: 9px; }
 
-
+ul { padding: 0 0 3px 40px; margin: 0; }
+li { padding: 0 0 6px 0; }
+th, td { padding: 3px 6px; }
+table, th, td { border: 1px solid #718096;  }
+table { border-collapse: collapse; padding: 0 0 9px; margin: 0 1px 9px 0; }
 
 /* Футер к низу */
 
@@ -26,7 +30,7 @@ body { display: flex; flex-direction: column; }
 /* Основные блоки */
 
 .top-menu, .data, .footer-data {
-    width: 1004px;
+    max-width: 1004px;
     margin: 0 auto;
 }
 .head {
@@ -39,15 +43,25 @@ body { display: flex; flex-direction: column; }
 	box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 .side-right {
-    padding: 16px 32px 16px 0; width: 300px; float: right; overflow: hidden;
+    padding: 16px 32px 16px 0; float: right; overflow: hidden;
+    width: 30%; min-width: 150px; max-width: 300px;
 }
 
 .content {
-    padding: 16px 32px; margin-right: 340px; overflow: hidden;
+    /* margin-right: 340px; */
+    padding: 16px 32px; overflow: hidden;
 }
 .content p { text-align: justify; }
 
-
+.footer-data {
+	color: #6E6E6E; padding: 19px 0 0 19px;
+}
+.footer-data a {
+    color: #718096; text-decoration: none;
+}
+.footer-data a:hover {
+    color: #fff; text-decoration: underline;
+}
 
 /* Верхнее меню */
 
@@ -58,10 +72,11 @@ body { display: flex; flex-direction: column; }
     display: flex;
     /* flex-wrap: wrap; justify-content: space-evenly; align-content: space-evenly; */
     justify-content: flex-end;
+    margin:0; padding:0;
 }
 .top-menu__item {
     display: flex; flex: 0; align-items: center;
-    height: 69px; padding: 1px 21px 0;
+    height: 69px; margin:0; padding: 1px 21px 0;
     font-size: 19px; text-transform: uppercase; text-decoration: none;
 }
 .top-menu__item-link {
